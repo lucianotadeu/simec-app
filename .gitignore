@@ -1,0 +1,21 @@
+# Dependências
+node_modules/
+
+# Ambiente — NUNCA versionar!
+.env
+
+# Uploads dos usuários (armazenar em S3/Cloudinary em produção)
+uploads/*
+!uploads/.gitkeep
+
+# Logs
+*.log
+logs/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/

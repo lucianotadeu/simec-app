@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erro <%= codigo %> — SIMEC 2025</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="page-auth">
+  <%- include('partials/header') %>
+  <main class="container">
+    <div class="auth-box" style="text-align:center">
+      <h1 style="font-size:4rem;margin-bottom:.5rem"><%= codigo %></h1>
+      <p style="font-size:1.1rem;margin-bottom:1.5rem"><%= mensagem %></p>
+      <a href="/" class="btn btn-primary">Voltar ao início</a>
+    </div>
+  </main>
+  <%- include('partials/footer') %>
+</body>
+</html>

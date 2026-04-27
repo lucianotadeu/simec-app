@@ -1,0 +1,20 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="logo">SIMEC <span>2025</span></a>
+    <nav class="main-nav">
+      <a href="/">Início</a>
+      <% if (usuarioId) { %>
+        <a href="/inscricoes">Minhas Inscrições</a>
+        <span class="nav-user">👤 <%= usuarioNome %></span>
+        <form method="post" action="/logout" style="display:inline">
+          <input type="hidden" name="_csrf"
+                 value="<%= typeof csrfToken !== 'undefined' ? csrfToken : '' %>">
+          <button type="submit" class="btn-link">Sair</button>
+        </form>
+      <% } else { %>
+        <a href="/login">Login</a>
+        <a href="/cadastro" class="btn-nav">Cadastrar</a>
+      <% } %>
+    </nav>
+  </div>
+</header>

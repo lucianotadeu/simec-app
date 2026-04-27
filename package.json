@@ -1,0 +1,29 @@
+{
+  "name": "simec-app",
+  "version": "1.0.0",
+  "description": "Sistema de Inscrição em Evento Acadêmico — SIMEC",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "db:migrate": "node db/migrate.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.3.1",
+    "express-session": "^1.18.0",
+    "express-validator": "^7.1.0",
+    "helmet": "^7.1.0",
+    "multer": "^2.0.0",
+    "mysql2": "^3.9.8",
+    "xss": "^1.0.15"
+  }
+}

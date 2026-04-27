@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — SIMEC 2025</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="page-auth">
+  <%- include('partials/header') %>
+  <main class="container">
+    <div class="auth-box">
+      <h1>Entrar</h1>
+
+      <% if (sucesso) { %>
+        <p class="msg msg-ok"><%= sucesso %></p>
+      <% } %>
+      <% if (erro) { %>
+        <p class="msg msg-erro"><%= erro %></p>
+      <% } %>
+
+      <form method="post" action="/login">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email"
+               autocomplete="email" required autofocus>
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha"
+               autocomplete="current-password" required>
+
+        <button type="submit" class="btn btn-primary btn-full">Entrar</button>
+      </form>
+
+      <p class="auth-link">
+        Não tem conta? <a href="/cadastro">Cadastre-se</a>
+      </p>
+    </div>
+  </main>
+  <%- include('partials/footer') %>
+</body>
+</html>
