@@ -250,3 +250,4 @@ npm audit fix        # Corrigir automaticamente
 - 🔒 **CORS** — lista explícita de origens permitidas
 - 🔒 **httpOnly cookies** — sessão inacessível via JavaScript
 - 🔒 **Variáveis de ambiente** — nenhum segredo no código
+"# simec-app" 
