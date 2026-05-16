@@ -92,6 +92,8 @@ app.use(session({
 app.use((req, res, next) => {
   res.locals.usuarioNome = req.session?.usuarioNome || null;
   res.locals.usuarioId   = req.session?.usuarioId   || null;
+  // Garante que csrfToken sempre exista nas views — gerarCsrf sobrescreve com o valor real
+  res.locals.csrfToken   = req.session?.csrfToken   || '';
   next();
 });
 
