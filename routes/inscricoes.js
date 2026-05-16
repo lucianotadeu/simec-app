@@ -14,7 +14,7 @@ const validarInscricao = [
 ];
 
 // ── GET /inscricoes — listar inscrições do usuário logado ─────
-router.get('/', autenticado, async (req, res) => {
+router.get('/', autenticado, gerarCsrf, async (req, res) => {
   const [inscricoes] = await pool.execute(
     `SELECT i.id, e.titulo, e.data_inicio, e.local_nome, i.camiseta, i.areas, i.inscrito_em
      FROM inscricoes i
